@@ -1,0 +1,58 @@
+.slide-menu {
+  display: flex;
+  overflow-x: auto;
+  scrollbar-width: none;
+  box-sizing: border-box;
+
+  &__list {
+    display: flex;
+    overflow-x: auto;
+    scrollbar-width: none;
+    padding-left: 24px;
+    padding-right: 24px;
+    gap: 6px 10px;
+  }
+
+  ul.slide-menu__list::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+
+  &__element {
+    display: flex;
+    align-items: center;
+  }
+
+  &__link {
+    border: 1px solid $button-border-color-3;
+    white-space: nowrap;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    padding: 7px 15px;
+    color: #7e7e82;
+
+    &:hover {
+      border: 1px solid #b8ffec;
+      border-radius: 6px;
+      color: #7e7e82;
+      background-color: #fff;
+    }
+  }
+}
+
+@media screen and (max-width: 1119px) {
+  .slide-menu {
+    &__list {
+      box-shadow: inset -15px 0px 7px -10px #ccc;
+    }
+  }
+}
+
+@media screen and (min-width: 1120px) {
+  .slide-menu {
+    &__list {
+      flex-wrap: wrap;
+    }
+  }
+}

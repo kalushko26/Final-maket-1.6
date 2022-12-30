@@ -1,0 +1,136 @@
+.modal {
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+  position: fixed;
+  top: 0px;
+  right: -600px;
+  width: 100vw;
+  min-width: 320px;
+  min-height: 100vh;
+  height: 100%;
+  background-color: #fff;
+  padding: 32px;
+  gap: 20px 0;
+  box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
+  transition: right 300ms;
+
+  &__header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    @include header-heading;
+  }
+
+  &__header:before {
+    content: " ";
+    position: absolute;
+    left: 0px;
+    width: 3px;
+    height: 40px;
+    background: #41f6d7;
+    border-radius: 0px 5px 5px 0px;
+  }
+
+  &__button {
+    justify-content: flex-start;
+  }
+
+  &__form {
+    display: flex;
+    width: 100%;
+  }
+
+  &--opened {
+    transition: right 300ms;
+    right: 0;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  &__name {
+    width: 100%;
+  }
+  &__phone {
+    width: 100%;
+  }
+
+  &__email {
+    width: 100%;
+  }
+
+  &__textarea {
+    width: 100%;
+  }
+
+  &__agreement {
+    font-family: "TT Lakes";
+    font-size: 14px;
+    line-height: 16px;
+    color: #7e7e82;
+    font-weight: 500;
+  }
+
+  &__link {
+    color: #ff3e79;
+    text-decoration: none;
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: $button-background-color-1;
+    border-radius: 16px;
+    width: 119px;
+    min-height: 32px;
+    gap: 0;
+    align-self: flex-end;
+    cursor: pointer;
+  }
+
+  &__btn-text {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: $button-background-color-2;
+    font-size: 12px;
+    line-height: 24px;
+    letter-spacing: -0.15px;
+    padding: 0.5px 0px 0px 0px;
+  }
+}
+
+.modal_feedback {
+  filter: none;
+}
+.modal_feedback * {
+  filter: none;
+}
+
+@media screen and (min-width: 441px) {
+  .modal {
+    width: 440px;
+  }
+}
+
+@media screen and (min-width: 540px) {
+  .modal {
+    &__button {
+      // position: absolute;
+      left: -71px;
+      top: 45px;
+    }
+  }
+}
+
+.btn-hidden {
+  right: 0;
+}
+
+.hid-callback {
+  right: 0;
+}

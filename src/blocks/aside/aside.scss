@@ -1,0 +1,40 @@
+.aside {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  z-index: 2;
+  top: 0px;
+  left: -400px;
+  transition: left 300ms;
+
+  @media screen and (max-width: $breakpoint_note_mx) {
+    left: -400px;
+  }
+
+
+
+
+
+
+  &__scroll-platform {
+    flex-grow: 1;
+    background-color: #fff;
+    width: 320px;
+  }
+
+  &--opened {
+    left: 0;
+    transition: left 300ms;
+  }
+}
+
+@media screen and (min-width: $breakpoint_note) {
+  .aside {
+    position: static;
+    transition: left;
+
+    &--opened {
+      left: 0;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+@mixin section-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  text-transform: uppercase;
+  // padding: 0 30px;
+  background: linear-gradient(90deg, #F8F8F8 1.39%, #FFFFFF 100%);
+  font-family: 'TT Lakes';
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  color: #7E7E82;
+  // height: 56px;
+  padding: 16px 30px 16px 0px;
+  // padding-left: 30px;
+
+}
+
+@mixin header-heading {
+  font-family: 'TT Lakes';
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 32px;
+  letter-spacing: -0.6px;
+  text-transform: none;
+  color: $header-heading-color;
+}

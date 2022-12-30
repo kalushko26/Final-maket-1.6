@@ -1,0 +1,120 @@
+.header {
+  display: flex;
+  flex-direction: row;
+
+  padding: 20px 30px;
+  box-sizing: border-box;
+
+  &__heading {
+    font-family: "TT Lakes";
+    font-size: 28px;
+    line-height: 40px;
+    letter-spacing: -0.6px;
+    color: #1b1c21;
+    position: absolute;
+    visibility: hidden;
+  }
+
+  &__heading:before {
+    content: " ";
+    position: absolute;
+    left: -30px;
+    width: 3px;
+    height: 40px;
+    background: #41f6d7;
+    border-radius: 0px 5px 5px 0px;
+  }
+
+  &__list {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+  }
+
+  &__list:first-child {
+    flex-grow: 1;
+    position: absolute;
+    gap: 40px;
+    visibility: hidden;
+  }
+
+  &__list:first-child::after {
+    position: absolute;
+    content: "";
+    border-left: 1px solid $divider;
+    height: 32px;
+    display: inline-block;
+    top: 11px;
+    left: 61px;
+    border-radius: 5px;
+  }
+
+  &__list:nth-child(2) {
+    margin-right: 40px;
+    position: absolute;
+    visibility: hidden;
+  }
+
+  &__list:nth-child(3) {
+    position: relative;
+  }
+
+  &__list:nth-child(3)::before {
+    position: absolute;
+    content: "";
+    border-left: 1px solid $divider;
+    height: 32px;
+    display: inline-block;
+    top: 11px;
+    left: -19px;
+    border-radius: 5px;
+  }
+}
+
+@media screen and (max-width: $breakpoint_tablet_mx) {
+  .header {
+    padding: 16px 16px;
+
+    &__list:first-child {
+      gap: 32px;
+    }
+
+    &__list:first-child::after {
+      left: 56px;
+    }
+  }
+}
+
+@media screen and (min-width: $breakpoint_note) {
+  .header {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+
+    &__heading {
+      position: relative;
+      visibility: visible;
+    }
+
+    &__list:nth-child(3)::before {
+      visibility: hidden;
+    }
+  }
+}
+
+@media screen and (max-width: $breakpoint_note_mx) {
+  .header {
+    &__list:first-child {
+      visibility: visible;
+      position: relative;
+    }
+  }
+}
+
+@media screen and (min-width: $breakpoint_tablet) and (max-width: $breakpoint_note_mx) {
+  .header {
+    &__list:nth-child(2) {
+      position: relative;
+      visibility: visible;
+    }
+  }
+}

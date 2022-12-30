@@ -1,0 +1,15 @@
+node_modules/
+dist/
+.gitpod.yml
+src/index*.html
+src/blocks/language/language*.scss
+src/blocks/modal_call/modal_call*.js
+src/blocks/modal_feedback/modal_feedback*.js
+src/blocks/pricelist/pricelist*.scss
+src/blocks/repairbrands/repairbrands*.js
+src/blocks/repaircategory/repaircategory*.js
+src/blocks/side_menu/side_menu*.js
+src/blocks/swiper/swiper*.js
+src/blocks/modal/modal_*.*
+webpack.config copy.js
+

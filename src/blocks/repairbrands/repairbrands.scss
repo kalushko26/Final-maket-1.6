@@ -1,0 +1,67 @@
+.repairbrands {
+  &__inner {
+    display: flex;
+    transition-property: max-height;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+    transition-delay: 0ms;
+
+    @media screen and (min-width: $breakpoint_tablet) {
+      max-height: 200px;
+      transition-delay: 0ms;
+    }
+
+    &--showall {
+      transition-delay: 0ms;
+
+      @media screen and (min-width: $breakpoint_tablet) {
+        max-height: 600px;
+        transition-delay: 0ms;
+      }
+    }
+  }
+
+  &__header {
+    display: flex;
+    @include section-header;
+  }
+
+  &__listitem {
+    display: flex;
+    justify-content: center;
+
+    width: 224px;
+    min-width: 224px;
+    flex-basis: 224px;
+    height: 72px;
+    min-height: 72px;
+
+    background-color: #fff;
+    border: 1px solid $button-background-color-2;
+    border-radius: 6px;
+    box-sizing: border-box;
+
+    @media screen and (min-width: $breakpoint_tablet) {
+      width: 240px;
+      min-width: 240px;
+      flex-basis: 72px;
+    }
+
+    &--grey {
+      background-color: #f8f8f8;
+      border: 0;
+    }
+  }
+
+  &__button {
+    display: flex;
+    min-width: 100%;
+    width: 100%;
+
+    &--showall {
+      @media screen and (max-width: 767.9px) {
+        display: none;
+      }
+    }
+  }
+}

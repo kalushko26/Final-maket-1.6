@@ -1,0 +1,118 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 24px 24px 24px;
+
+  &__header {
+    @include section-header;
+  }
+
+  &__slider {
+    padding: 20px 0;
+  }
+
+  &__text_container {
+    text-overflow: hidden;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    text-overflow: hidden;
+    overflow: hidden;
+    max-height: 10rem;
+    transition: max-height 300ms ease;
+
+    &--showall {
+      max-height: 600px;
+      transition: max-height 500ms ease;
+    }
+  }
+
+  &__image {
+    // width: 100%;
+    height: 100%;
+    border-radius: 16px;
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    visibility: visible;
+    cursor: pointer;
+
+  }
+
+  &__btn-img-box {
+    transform: rotate(0deg) translateY(1px);
+
+    &--rotated--180 {
+      transform: rotate(180deg) translateY(1px);
+    }
+  }
+}
+
+@media screen and (min-width: $breakpoint_smartphone) {
+  &--mod--row {
+    flex-direction: column;
+    }
+}
+
+
+@media screen and (max-width: $breakpoint_tablet_mx) {
+  .section {
+    &__btn {
+      visibility: hidden;
+      position: absolute;
+
+      &--mod--visible {
+        display: flex;
+        align-items: center;
+        visibility: visible;
+        position: static;
+        cursor: pointer;
+      }
+    }
+
+  }
+}
+
+
+@media screen and (min-width: $breakpoint_tablet) {
+  .section {
+    &__text_container {
+      width: 49%;
+    }
+
+    &__image_container {
+      width: 49%;
+      height: 208px;
+    }
+
+    &--mod--row {
+      flex-direction: row;
+      }
+  }
+}
+
+
+@media screen and (min-width: $breakpoint_note) {
+  .section {
+
+    &__text_container {
+      width: 49%;
+    }
+
+    &__image_container {
+      width: 49%;
+      min-height: 307px;
+    }
+
+    &--mod--row {
+      flex-direction: row;
+      }
+
+  }
+}
+

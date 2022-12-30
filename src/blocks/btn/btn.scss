@@ -1,0 +1,79 @@
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  justify-content: space-around;
+  transition: transform 2s, opacity 2s;
+  box-sizing: border-box;
+  opacity: 1;
+  transform: scale(1);
+
+  &:hover {
+    transition: transform 1s, opacity 1s;
+    opacity: 0.9;
+    transform: scale(1.1);
+  }
+
+  &__text {
+    position: absolute;
+    visibility: hidden;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: $button_fontsize_md;
+
+    &--visible--all {
+      visibility: visible;
+      position: static;
+    }
+
+    &--pos--static {
+      position: static;
+    }
+
+    &--boldcaps {
+      display: block;
+      visibility: visible;
+      text-transform: uppercase;
+      font-weight: bold;
+      color: $button-background-color-2;
+      font-size: 12px;
+      line-height: 24px;
+      letter-spacing: -0.15px;
+      padding: 0.5px 0px 0px 0px;
+    }
+  }
+
+  &__logo-box {
+    padding-top: 5px;
+  }
+
+  &__img-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: $button-background-color-1;
+    border-radius: 50%;
+
+    &--rotated--180 {
+      transform: rotate(180deg);
+      transition-duration: 0ms;
+    }
+  }
+
+  &--brands {
+    width: 240px;
+  }
+}
+
+@media screen and (min-width: $breakpoint_note) {
+  .btn {
+    &__text {
+      visibility: visible;
+      position: static;
+    }
+  }
+}

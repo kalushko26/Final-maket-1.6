@@ -1,0 +1,28 @@
+.contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contacts_links__group_1 {
+  display: flex;
+  gap: 16px;
+}
+
+.contacts__buttons {
+  display: flex;
+  gap: 16px;
+}
+
+.contacts__links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.email {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2;
+}

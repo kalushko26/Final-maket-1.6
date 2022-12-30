@@ -1,0 +1,93 @@
+.repaircategory {
+  &__inner {
+    display: flex;
+    justify-content: flex-start;
+    transition-property: max-height;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+    transition-delay: 0ms;
+
+    &--showall {
+      max-height: 600px;
+    }
+  }
+
+  &__header {
+    display: flex;
+    @include section-header;
+  }
+
+  &__main {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    border-radius: 6px;
+    background-color: #f8f8f8;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+    color: #1b1c21;
+
+    @media screen and (min-width: $breakpoint_tablet) {
+      flex-wrap: wrap;
+      gap: 20px 0px;
+    }
+
+    @media screen and (min-width: $breakpoint_tablet) {
+      flex-wrap: wrap;
+      gap: 20px 0px;
+    }
+  }
+
+  &__element {
+    display: flex;
+    min-width: 240px;
+    width: 240px;
+    min-height: 160px;
+    height: 160px;
+    flex-basis: 240px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    position: relative;
+    padding: 16px;
+    background-color: #fff;
+    border-radius: 6px;
+    border: 1px solid #eaeaea;
+
+    @media screen and (min-width: $breakpoint_tablet) {
+      min-width: 224px;
+      width: 224px;
+    }
+
+    @media screen and (min-width: $breakpoint_tablet) {
+      min-width: 240px;
+      width: 240px;
+    }
+
+    &--grey {
+      background-color: #f8f8f8;
+      border: 0;
+    }
+  }
+
+  &__type {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: #1b1c21;
+  }
+
+  &__button {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+
+    &--showall {
+      @media screen and (max-width: 767.9px) {
+        display: none;
+      }
+    }
+  }
+}
